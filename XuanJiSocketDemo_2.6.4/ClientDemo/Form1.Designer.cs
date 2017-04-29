@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.btnSendThis = new System.Windows.Forms.Button();
             this.bn_Conn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -42,12 +43,13 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.txtThis = new System.Windows.Forms.TextBox();
-            this.btnSendThis = new System.Windows.Forms.Button();
             this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox3
             // 
+            this.groupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox3.Controls.Add(this.btnSendThis);
             this.groupBox3.Controls.Add(this.bn_Conn);
             this.groupBox3.Controls.Add(this.label1);
@@ -57,11 +59,21 @@
             this.groupBox3.Controls.Add(this.txtIP);
             this.groupBox3.Controls.Add(this.btnSend);
             this.groupBox3.Controls.Add(this.btnConnect);
-            this.groupBox3.Location = new System.Drawing.Point(12, 12);
+            this.groupBox3.Location = new System.Drawing.Point(8, 12);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(526, 94);
+            this.groupBox3.Size = new System.Drawing.Size(538, 94);
             this.groupBox3.TabIndex = 27;
             this.groupBox3.TabStop = false;
+            // 
+            // btnSendThis
+            // 
+            this.btnSendThis.Location = new System.Drawing.Point(304, 45);
+            this.btnSendThis.Name = "btnSendThis";
+            this.btnSendThis.Size = new System.Drawing.Size(102, 32);
+            this.btnSendThis.TabIndex = 23;
+            this.btnSendThis.Text = "发送消息";
+            this.btnSendThis.UseVisualStyleBackColor = true;
+            this.btnSendThis.Click += new System.EventHandler(this.btnSendThis_Click);
             // 
             // bn_Conn
             // 
@@ -76,7 +88,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(-6, 48);
+            this.label1.Location = new System.Drawing.Point(9, 48);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(65, 12);
             this.label1.TabIndex = 7;
@@ -85,7 +97,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 21);
+            this.label2.Location = new System.Drawing.Point(21, 21);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(53, 12);
             this.label2.TabIndex = 7;
@@ -104,7 +116,7 @@
             // txtPort
             // 
             this.txtPort.ForeColor = System.Drawing.Color.Blue;
-            this.txtPort.Location = new System.Drawing.Point(65, 45);
+            this.txtPort.Location = new System.Drawing.Point(80, 45);
             this.txtPort.Name = "txtPort";
             this.txtPort.Size = new System.Drawing.Size(100, 21);
             this.txtPort.TabIndex = 8;
@@ -113,7 +125,7 @@
             // txtIP
             // 
             this.txtIP.ForeColor = System.Drawing.Color.Blue;
-            this.txtIP.Location = new System.Drawing.Point(65, 18);
+            this.txtIP.Location = new System.Drawing.Point(80, 18);
             this.txtIP.Name = "txtIP";
             this.txtIP.Size = new System.Drawing.Size(100, 21);
             this.txtIP.TabIndex = 8;
@@ -141,20 +153,25 @@
             // 
             // infolist
             // 
+            this.infolist.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.infolist.FormattingEnabled = true;
             this.infolist.ItemHeight = 12;
-            this.infolist.Location = new System.Drawing.Point(18, 334);
+            this.infolist.Location = new System.Drawing.Point(8, 334);
             this.infolist.Name = "infolist";
-            this.infolist.Size = new System.Drawing.Size(528, 88);
+            this.infolist.Size = new System.Drawing.Size(538, 88);
             this.infolist.TabIndex = 28;
             // 
             // statuslist
             // 
+            this.statuslist.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.statuslist.FormattingEnabled = true;
             this.statuslist.ItemHeight = 12;
-            this.statuslist.Location = new System.Drawing.Point(14, 228);
+            this.statuslist.Location = new System.Drawing.Point(8, 228);
             this.statuslist.Name = "statuslist";
-            this.statuslist.Size = new System.Drawing.Size(528, 88);
+            this.statuslist.Size = new System.Drawing.Size(538, 88);
             this.statuslist.TabIndex = 29;
             // 
             // label10
@@ -177,21 +194,13 @@
             // 
             // txtThis
             // 
-            this.txtThis.Location = new System.Drawing.Point(18, 112);
+            this.txtThis.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtThis.Location = new System.Drawing.Point(8, 112);
             this.txtThis.Multiline = true;
             this.txtThis.Name = "txtThis";
-            this.txtThis.Size = new System.Drawing.Size(514, 98);
+            this.txtThis.Size = new System.Drawing.Size(538, 98);
             this.txtThis.TabIndex = 23;
-            // 
-            // btnSendThis
-            // 
-            this.btnSendThis.Location = new System.Drawing.Point(304, 45);
-            this.btnSendThis.Name = "btnSendThis";
-            this.btnSendThis.Size = new System.Drawing.Size(102, 32);
-            this.btnSendThis.TabIndex = 23;
-            this.btnSendThis.Text = "发送消息";
-            this.btnSendThis.UseVisualStyleBackColor = true;
-            this.btnSendThis.Click += new System.EventHandler(this.btnSendThis_Click);
             // 
             // Form1
             // 
